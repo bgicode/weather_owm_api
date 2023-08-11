@@ -8,18 +8,18 @@ if ($_REQUEST['doGo']) {
 	$city = $_REQUEST['city'];	
 	$units;
 	$unitsWindSpeed;
-	$unitsTemp;
+	// $unitsTemp;
 	$unitsPressue;
 	
 	if (!($_REQUEST['units'])){
 		$units = 'metric';
 		$unitsWindSpeed = ' м/с';
-		$unitsTemp = ' <sup>o</sup>C';
+		// $unitsTemp = ' <sup>o</sup>C';
 		$unitsPressue = ' мм рт. ст.';
 	} else if ($_REQUEST['units']){
 		$units = 'imperial';		
 		$unitsWindSpeed = ' миль/ч';
-		$unitsTemp = ' <sup>o</sup>F';
+		// $unitsTemp = ' <sup>o</sup>F';
 		$unitsPressue = ' гПа';
 	}
 

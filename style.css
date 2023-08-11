@@ -44,8 +44,7 @@ html, body {height:100%;}
 }
 
 .descrip {
-		width: 100%;
-      
+		width: 100%;      
     display: flex;
     align-items: center;
     align-content: center;
@@ -86,6 +85,7 @@ html, body {height:100%;}
 	font-weight: 400;
 	line-height: normal;
 	outline: none;
+	color: black;
 }
 
 .search_form_send{
@@ -170,4 +170,8 @@ line-height: normal;
 	font-weight: 400;
 	line-height: normal;
 	margin-bottom: 10px;
+}
+
+.temp_units{
+	display: none;
 }

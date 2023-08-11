@@ -35,7 +35,7 @@ require_once 'WeatherAPI.php';
 					<div id="icon"><img id="wicon" src=<?php echo $weatherIconImg ?>></div>		
 					<div class="temp">
 						<span class="temp_value"><?php echo $temperatur ?></span>
-						<!-- <span class="temp_units">//<?php echo $unitsTemp ?></span> -->
+						<!-- <span class="temp_units"></span> -->
 					</div>
 				</div>
 			</div>
