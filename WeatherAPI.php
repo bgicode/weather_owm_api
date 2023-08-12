@@ -58,7 +58,7 @@ $options = array(
 	'q' => $city,
 	'APPID' => 'f8821479d99a15b40f370c7c305ed51f',
 	'units' => $units,
-	'lang' => 'ru',
+	'lang' => 'en',
 );
 
 $ch = curl_init();
@@ -78,8 +78,32 @@ $iconCode = $data['list'][0]['weather'][0]['icon'];
 
 $weatherIconImg = 'https://api.openweathermap.org/img/w/' . $iconCode . '.png';
 
-$description = $data['list'][0]['weather'][0]['description'];
+$descriptionEn = $data['list'][0]['weather'][0]['main'];
 
+$descriptionClouds = $data['list'][0]['weather'][0]['description'];
+
+$description;
+
+if($descriptionClouds == 'few clouds'){
+	$description = "Переменная облачность";
+}elseif (($descriptionClouds == 'scattered clouds') OR ($descriptionClouds == 'broken clouds') OR ($descriptionClouds == 'overcast clouds')){
+	$description = "Переменная облачность";
+}
+
+switch ($descriptionEn) {	
+	case 'Clear':
+		$description = "Ясно";
+			break;
+	case 'Rain':
+			$windDirection = "Дождь";
+			break;
+	case 'Drizzle':
+			$windDirection = "Дождь";
+			break;
+	case 'Thunderstorm':
+			$windDirection = "Гроза";
+			break;										
+	};
 
 if (!($_REQUEST['units'])){
 	$windSpeed = round($data['list'][0]['wind']['speed']);

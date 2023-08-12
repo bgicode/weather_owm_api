@@ -42,12 +42,12 @@ require_once 'WeatherAPI.php';
 					<input class="change_sity_by_ip" id="doGoGeo" type="submit" name="doGoGeo" value="Моё местоположение">
 				<label for=""></label>
 			</div>			     
-    </form>
-		
+    </form>		
+
 		<div class="main">
 			<div class="temp_wrap">
 				<div class="temp_info">
-					<div id="icon"><img id="wicon" src=<?php echo $weatherIconImg ?>></div>		
+					<div id="icon"></div>		
 					<div class="temp">
 						<span class="temp_value"><?php echo $temperatur ?></span>
 						
@@ -55,7 +55,7 @@ require_once 'WeatherAPI.php';
 				</div>
 			</div>
 			<div class="descrip">
-				<div><?php echo $description ?></div>
+				<div class="description_value"><?php echo $description ?></div>
 			</div>	
 		</div>
 

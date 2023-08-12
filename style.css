@@ -263,7 +263,31 @@ line-height: normal;
 }
 
 
+#icon{	
+	width: 200px;
+	height: 200px;
+	background-size: contain;
+}
 
+.clear{
+	background-image: url('img/sun_2x.png');
+}
+
+.clouds{
+	background-image: url('img/partly_cloudy2x.png');
+}
+
+.scattered_clouds{
+	background-image: url('img/cloud@2x.png');
+}
+
+.rain {
+	background-image: url('img/rain2X.png');
+}
+
+.thunderstorm {
+	background-image: url('img/strom2x.png');
+}
 
 
 
