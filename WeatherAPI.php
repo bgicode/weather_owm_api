@@ -121,17 +121,15 @@ switch (true) {
 			break;										
 	};
 
-
 $pressureImp = round($data['list'][0]['main']['pressure']);
 $pressureMetric = round($pressureImp/1.33);
 $pressure = $units == 'imperial' ? $pressureImp : $pressureMetric; 
 
 $humidity = $data['list'][0]['main']['humidity'];
 
-$chancePrecipitation = $data['list'][0]['pop'];
+$chancePrecipitation = ($data['list'][0]['pop'])*100;
 
 }
-
 
 
 ?>
