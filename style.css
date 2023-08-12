@@ -109,7 +109,7 @@ html, body {height:100%;}
 	justify-content: space-between;
 }
 
-.change_sity{
+.change_sity_wrap{	
 	cursor: pointer;
 	color: #FFF;	
 	font-size: 18px;
@@ -117,6 +117,8 @@ html, body {height:100%;}
 	font-weight: 400;
 	line-height: normal;
 	opacity: 0.6;
+	display: flex;
+	margin-top: 9px;
 }
 
 .temp_info {
@@ -199,28 +201,22 @@ line-height: normal;
 	width: 50%;
 	height: 29px;		
 	padding: 0;
-	margin: 0;
-	/* background-color: rgba(255, 255, 255, 0.2); */
+	margin: 0;	
 	border: solid rgba(255, 255, 255, 0.4);
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;	
-	border-width: 1px 0 1px 1px;
-	
-	
+	border-width: 1px 0 1px 1px;	
   vertical-align: middle
 }
 
 .switch_slider_F {
-
 	line-height: 25px;
   text-align: center;	
 	cursor: pointer;
 	width: 50%;
-	height: 29px;	
-		
+	height: 29px;		
 	padding: 0;
-	margin: 0;
-	
+	margin: 0;	
 	border: solid rgba(255, 255, 255, 0.4);
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;	
@@ -231,8 +227,38 @@ line-height: normal;
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
+.change_sity{
+	margin-right: 25px;
+	display: flex;
+}
+
+.change_sity > span {	
+	margin: auto;	
+}
 
 .switch_wrap {
+	display: flex;
+}
+
+.change_sity_wrap_opsity {
+	display: none;
+}
+
+.change_sity_by_ip {
+	padding: 0;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	cursor: pointer;
+	outline: none; 
+  border: 0;
+  background: transparent;
+	height: 100%;
+	margin: auto;
+}
+
+.doGoGeo {
 	display: flex;
 }
 
