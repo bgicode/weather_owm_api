@@ -21,7 +21,9 @@ require_once 'WeatherAPI.php';
 			</div> 
 
 			<div class="options_wrap">
+				
 				<div class="selected_sity"><?php echo $city ?></div>
+				
 
 			
 
@@ -41,6 +43,7 @@ require_once 'WeatherAPI.php';
 
 			</div>
 			<div class="change_sity" >Сменить город</div>
+			<input class="search_form_send" id="doGoGeo" type="submit" name="doGoGeo" value="Моё местоположение">
 			     
     </form>
 		<div class="main">

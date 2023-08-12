@@ -1,11 +1,39 @@
 <?php
+
+require_once 'SxGeo.php';
+
 $city = 'Москва';
 
 
+if (($_REQUEST['doGo']) or ($_REQUEST['doGoGeo'])) {
 
-if ($_REQUEST['doGo']) {
+$city = $_REQUEST['city'];
 	
-	$city = $_REQUEST['city'];	
+	if ($_REQUEST['doGoGeo']){
+		function getIp(){
+			$keys = [
+				'HTTP_CLIENT_IP',
+				'HTTP_X_FORWARDED_FOR',
+				'REMOTE_ADDR'
+			];
+			foreach ($keys as $key) {
+				if(!empty($_SERVER[$key])){
+					$ip = trim(end(explode(',', $_SERVER[$key])));
+					if (filter_var($ip, FILTER_VALIDATE_IP)) {
+						return $ip;
+					}
+				}
+			}
+		}
+
+		$ip = getIp();		
+		$SxGeo = new SxGeo('SxGeoCity.dat', SXGEO_BATCH | SXGEO_MEMORY);
+		$cityInfoForIp = $SxGeo->getCityFull($ip);
+		$cityForIp = $cityInfoForIp['city']['name_ru'];
+
+		$city = $cityForIp;
+	};	
+		
 	$units;
 	$unitsWindSpeed;
 	// $unitsTemp;
