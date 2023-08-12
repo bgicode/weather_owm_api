@@ -5,12 +5,26 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 	document.querySelector('.switch_input').addEventListener('click', (e) =>{
 		document.getElementById('search-form').classList.remove('search-form_show');
-	})	
+	})
+	
+	// Checker color
+	
+
 	
 });
 
 
-function switch_units(){		
+function switch_units(){	
+
+	if (document.querySelector('.switch_input').checked ) {
+		
+		document.querySelector('.switch_slider_F').classList.add('switch_slider_Color');
+		document.querySelector('.switch_slider_C').classList.remove('switch_slider_Color');
+	}else{
+		
+		document.querySelector('.switch_slider_C').classList.add('switch_slider_Color');
+		document.querySelector('.switch_slider_F').classList.remove('switch_slider_Color');
+	};	
 
 	let temp = document.querySelector('.temp_value').innerText;
 	let wind = document.querySelector('.wind_speed_value').innerText;
@@ -28,11 +42,10 @@ function switch_units(){
 
 		let mmMercPilor = pressue*1.33;
 		document.querySelector('.pressue_value').innerText = Math.round(mmMercPilor);
-		document.querySelector('.pressue_units').innerHTML = ' гПа';
+		document.querySelector('.pressue_units').innerHTML = ' гПа';	
 
+	} else {			
 		
-
-	} else {		
 		let Cel = (temp - 32) * 5 / 9;
 		document.querySelector('.temp_value').innerText = Math.round(Cel);
 		
@@ -47,3 +60,7 @@ function switch_units(){
 	}
 	
 	}
+
+
+
+

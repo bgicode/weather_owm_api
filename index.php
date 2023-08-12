@@ -11,6 +11,7 @@ require_once 'WeatherAPI.php';
 	<link rel="stylesheet" type="text/css" href="style.css" >
 </head>
  <body onload="load()"> 
+ 
 	<div class="wrap">
 		<form id="myForm" action="<?php $_SERVER['REQUEST_URI'] ?>" method="get" name="frm1">
 			
@@ -21,12 +22,25 @@ require_once 'WeatherAPI.php';
 
 			<div class="options_wrap">
 				<div class="selected_sity"><?php echo $city ?></div>
-				<label class = "switch" for="" onclick="switch_units()">
-					<input type="checkbox" class="switch_input" name="units"  onclick="serch_close()" <?php if (!empty($_GET['units'])) echo 'checked' ?>>
-					<span class="switch_slider"></span>
-				</label>
+
+			
+
+
+				
+				<div class="switch_wrap">
+					<sub>O  &nbsp</sub>
+					<label class="switch" for="check" >
+						<input id="check" type="checkbox" class="switch_input" name="units" onclick="switch_units()" <?php if (!empty($_GET['units'])) echo 'checked' ?>>
+						<div class="switch_slider_C">C</div>
+						<div class="switch_slider_F">F</div>					
+					</label>
+				</div>
+				
+				
+				
+
 			</div>
-			<div class="change_sity" onclick="serch_open()">Сменить город</div>
+			<div class="change_sity" >Сменить город</div>
 			     
     </form>
 		<div class="main">
