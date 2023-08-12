@@ -55,7 +55,7 @@ require_once 'WeatherAPI.php';
 				</div>
 			</div>
 			<div class="descrip">
-				<div class="description_value"><?php echo $description ?></div>
+				<div class="description_value"><?php echo $description ?></div>				
 			</div>	
 		</div>
 

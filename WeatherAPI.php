@@ -87,7 +87,7 @@ $description;
 if($descriptionClouds == 'few clouds'){
 	$description = "Переменная облачность";
 }elseif (($descriptionClouds == 'scattered clouds') OR ($descriptionClouds == 'broken clouds') OR ($descriptionClouds == 'overcast clouds')){
-	$description = "Переменная облачность";
+	$description = "Облачно";
 }
 
 switch ($descriptionEn) {	
@@ -95,13 +95,13 @@ switch ($descriptionEn) {
 		$description = "Ясно";
 			break;
 	case 'Rain':
-			$windDirection = "Дождь";
+		$description = "Дождь";
 			break;
 	case 'Drizzle':
-			$windDirection = "Дождь";
+		$description = "Дождь";
 			break;
 	case 'Thunderstorm':
-			$windDirection = "Гроза";
+		$description = "Гроза";
 			break;										
 	};
 
@@ -152,6 +152,7 @@ $pressure = $units == 'imperial' ? $pressureImp : $pressureMetric;
 $humidity = $data['list'][0]['main']['humidity'];
 
 $chancePrecipitation = ($data['list'][0]['pop'])*100;
+
 
 }
 

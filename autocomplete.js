@@ -1,6 +1,5 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-
 	
 
 	switch (document.querySelector('.description_value').innerText) {
@@ -16,15 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		case 'Дождь':
 			document.getElementById('icon').classList.add('rain');
 			break;
-		case 'Облачно':
+		case 'Переменная облачность':
 			document.getElementById('icon').classList.add('scattered_clouds');
 				break;	
 		default:
 			document.getElementById('icon').classList.add('clouds');
 	}
 	
-
-
 
 	if (!(sessionStorage.getItem('weatherStor'))){		
 		document.getElementById('doGo').click();		
