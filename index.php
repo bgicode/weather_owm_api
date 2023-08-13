@@ -12,7 +12,7 @@ require_once 'WeatherAPI.php';
 </head>
  <body onload="load()"> 
  
-	<div class="wrap">
+	<div id="wrap" class="wrap">
 		<form id="myForm" action="<?php $_SERVER['REQUEST_URI'] ?>" method="get" name="frm1">			
 			<div class="search-form" id="search-form">
 				<input class="search_form_input" type="text" name="city" id="" value=<?php echo $city ?>>
@@ -61,37 +61,32 @@ require_once 'WeatherAPI.php';
 
 			<div class="parameter_title_wrap">
 
-				<div class="wind_wrap">
+				<div class="parameter_wrap wind_wrap">
 					<div class="parameter_title wind_title">Ветер</div>
 					<div class="wind_speed">
 						<span class="parameter wind_speed_value"><?php echo $windSpeed ?></span>
-						<span class="wind_speed_units"><?php echo $unitsWindSpeed ?></span>
+						<span class="wind_speed_units"><?php echo $unitsWindSpeed ?>, <?php echo $windDirection ?></span>
 					</div>
 				</div>
 
-				<div class="pressue_wrap">
+				<div class="parameter_wrap pressue_wrap">
+					<div></div>
 					<div class="parameter_title pressue_title">Давление</div>
 						<div class="pressue">
 						<span class="parameter pressue_value"><?php echo $pressure ?></span>
 						<span class="pressue_units"><?php echo $unitsPressue ?></span>
 					</div>
-				</div>
+				</div>				
 
-				<div class="windDir_wrap">
-					<div class="parameter_title windDir_title">Направление ветра</div>
-					<div class="parameter"><?php echo $windDirection ?></div>	
-				</div>
-
-				<div class="humi_wrap">
+				<div class="parameter_wrap humi_wrap">
 					<div class="parameter_title humi_title">Влажность</div>
 					<div class="parameter"><?php echo $humidity ?> %</div>	
 				</div>
 
-				<div class="chanceP_wrap">
+				<div class="parameter_wrap chanceP_wrap">
 					<div class="parameter_title chanceP_title">Вероятность осадков</div>
 					<div class="parameter"><?php echo $chancePrecipitation ?> %</div>
-				</div>		
-						
+				</div>						
 			</div>
 
 		</div>

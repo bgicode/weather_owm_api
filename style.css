@@ -22,7 +22,7 @@ html, body {height:100%;}
 .wrap {
 	width: 100%;
 	height: 100%;
-	background: #498CEC;
+	/* background: #498CEC; */
 	padding: 75px;
 	display: flex;
   flex-direction: column;
@@ -163,6 +163,7 @@ line-height: normal;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+	flex-wrap: wrap;
 }
 
 .parameter_title{
@@ -183,9 +184,7 @@ line-height: normal;
 	width: 77px;
   height: 29px;
 	padding: 0;
-	margin: 0;
-	
-	
+	margin: 0;	
 }
 
 .switch_input {
@@ -275,12 +274,13 @@ line-height: normal;
 }
 
 .clouds{
-	background-image: url('img/partly_cloudy2x.png');
+	background-image: url('img/cloud@2x.png');
 }
 
 .scattered_clouds{
-	background-image: url('img/cloud@2x.png');
+	background-image: url('img/partly_cloudy2x.png');
 }
+
 
 .rain {
 	background-image: url('img/rain2X.png');
@@ -290,6 +290,57 @@ line-height: normal;
 	background-image: url('img/strom2x.png');
 }
 
+.wrap_color_clear {
+	background: #498CEC;
+}
+
+.wrap_color_clouds{
+	background: #7290B9;
+}
+
+
+@media screen and (max-width: 900px) {
+	.parameter_wrap {
+		flex-basis: 50%;
+		margin-bottom: 35px;
+	}
+
+	.pressue_wrap, .chanceP_wrap {
+		text-align: end;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.wrap {
+		padding: 40px;		
+	}
+}
+
+@media screen and (max-width: 770px) {
+
+	.change_sity_wrap {
+		width: 100%;
+		justify-content: space-between;
+	}
+	.parameter_wrap {
+		/* width: 45%; */
+		margin-bottom: 35px;
+		
+	}
+
+	.wrap {
+		padding: 25px;
+	}
+
+	#myForm {
+		width: 100%;
+		position: relative;
+	}
+
+	.search-form {
+		width: 100%;
+	}
+}
 
 
 

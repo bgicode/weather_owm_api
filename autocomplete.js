@@ -5,21 +5,27 @@ document.addEventListener("DOMContentLoaded", () => {
 	switch (document.querySelector('.description_value').innerText) {
 		case 'Ясно':
 			document.getElementById('icon').classList.add('clear');
+			document.getElementById('wrap').classList.add('wrap_color_clear');
 			break;
 		case 'Гроза':
 			document.getElementById('icon').classList.add('thunderstorm');
+			document.getElementById('wrap').classList.add('wrap_color_clouds');
 			break;
 		case 'Дождь':
 			document.getElementById('icon').classList.add('rain');
+			document.getElementById('wrap').classList.add('wrap_color_clouds');
 			break;
 		case 'Дождь':
 			document.getElementById('icon').classList.add('rain');
+			document.getElementById('wrap').classList.add('wrap_color_clouds');
 			break;
 		case 'Переменная облачность':
 			document.getElementById('icon').classList.add('scattered_clouds');
+			document.getElementById('wrap').classList.add('wrap_color_clear');
 				break;	
 		default:
 			document.getElementById('icon').classList.add('clouds');
+			document.getElementById('wrap').classList.add('wrap_color_clouds');
 	}
 	
 
